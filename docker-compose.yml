@@ -6,6 +6,7 @@ services:
       context: ./UI
     ports:
       - "5173:80" 
+    networks:
       - app-network
 
   # Backend Service: URL Service
@@ -14,9 +15,9 @@ services:
       context: ./url-service
     environment:
       - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}  # Pass in DB connection string or any other env variables
-      - PORT=${PORT:-3000}
+      - PORT=${URL_SERVICE_PORT:-3000}
     ports:
-       - "3000:${PORT:-3000}"
+      - "3000:${URL_SERVICE_PORT:-3000}"
     networks:
       - app-network
 
@@ -26,9 +27,9 @@ services:
       context: ./redirect-service
     environment:
       - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
-      - PORT=${PORT:-3001}
+      - PORT=${REDIRECT_SERVICE_PORT:-3001}
     ports:
-      - "3001:${PORT:-3001}"
+      - "3001:${REDIRECT_SERVICE_PORT:-3001}"
     networks:
       - app-network
 
@@ -38,9 +39,9 @@ services:
       context: ./click-history-service
     environment:
       - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
-      - PORT=${PORT:-3002}
+      - PORT=${CLICK_HISTORY_SERVICE_PORT:-3002}
     ports:
-      - "3002:${PORT:-3002}"
+      - "3002:${CLICK_HISTORY_SERVICE_PORT:-3002}"
     networks:
       - app-network
 

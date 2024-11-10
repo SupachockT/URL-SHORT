@@ -13,7 +13,7 @@
 - run `docker-compose build`
 
 ## Architecture Diagram
-![Architecture Diagram](./Architecture_Diagram.png)
+![Architecture Diagram](./Architecture%20Diagram.png)
 
 ## Data Flow Diagram
 ![Data Flow Diagram](./Diagram%20Data%20Flow%20Diagram.png)

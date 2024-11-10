@@ -4,6 +4,8 @@ import { IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHe
 import TableChartIcon from '@mui/icons-material/TableChart';
 import BarChartIcon from '@mui/icons-material/BarChart';
 
+const redirect_base_url = import.meta.env.REDIRECT_BASE_URL
+
 export default function Render_History() {
     const [viewMode, setViewMode] = useState('table');
     const { data, isLoading, isError, error } = useUrlHistory();
@@ -67,7 +69,7 @@ export default function Render_History() {
                                             <TableBody>
                                                 {historyItem.short_urls?.map((shortUrlItem, subIdx) => (
                                                     <TableRow key={`${idx}-${subIdx}`} sx={tableRowStyle}>
-                                                        <TableCell sx={tableCellStyle}>{shortUrlItem.short_url}</TableCell>
+                                                        <TableCell sx={tableCellStyle}>{redirect_base_url + shortUrlItem.short_url}</TableCell>
                                                         <TableCell sx={tableCellStyle}>{shortUrlItem.click_time || '0'}</TableCell>
                                                         <TableCell sx={tableCellStyle}>
                                                             {shortUrlItem.last_clicked_time

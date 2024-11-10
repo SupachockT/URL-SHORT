@@ -1,4 +1,6 @@
 # URL-SHORT
+- you can access this system through internet with link
+- https://shortforyou.netlify.app
 
 ## brute force method
 - go into each root directory of each folder

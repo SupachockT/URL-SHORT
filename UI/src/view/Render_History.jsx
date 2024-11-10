@@ -4,7 +4,7 @@ import { IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHe
 import TableChartIcon from '@mui/icons-material/TableChart';
 import BarChartIcon from '@mui/icons-material/BarChart';
 
-const redirect_base_url = import.meta.env.REDIRECT_BASE_URL
+const redirect_base_url = import.meta.env.VITE_REDIRECT_BASE_URL;
 
 export default function Render_History() {
     const [viewMode, setViewMode] = useState('table');

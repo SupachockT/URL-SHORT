@@ -6,7 +6,7 @@ import { useSnackbar } from 'notistack';
 import { isValidUrl } from "../../public/utils";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
-const redirect_url_service = import.meta.env.REDIRECT_BASE_URL
+const redirect_url_service = import.meta.env.VITE_REDIRECT_BASE_URL;
 
 export default function Render_Home() {
     const [isBack, setIsBack] = useState(false);

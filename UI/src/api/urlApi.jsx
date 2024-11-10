@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const service_url = import.meta.env.URL_SERVICE_BASE_URL || "http://localhost:10000"
+const service_url = import.meta.env.VITE_URL_SERVICE_BASE_URL || "http://localhost:10000"
 
 const axiosInstance = axios.create({
     baseURL: service_url,

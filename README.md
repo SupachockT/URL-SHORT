@@ -13,10 +13,10 @@
 - run `docker-compose build`
 
 ## Architecture Diagram
-![Architecture Diagram](./Architecture Diagram.png)
-
-## Database ER Diagram
-![Database ER Diagram](./Database ER diagram.png)
+![Architecture Diagram](./Architecture_Diagram.png)
 
 ## Data Flow Diagram
-![Data Flow Diagram](./Diagram Data Flow Diagram.png)
+![Data Flow Diagram](./Diagram%20Data%20Flow%20Diagram.png)
+
+## Database ER Diagram
+![Database ER Diagram](./Database%20ER%20diagram.png)
